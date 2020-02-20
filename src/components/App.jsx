@@ -9,15 +9,22 @@ function App() {
   const [notes, setNotes] = useState([]);
 
   function addNote(newNote) {
-    ////props.onAdd(note)) in CreateArea.jsx  <CreateArea onAdd={addNote} />;
+    ////props.onAdd(note)) defined in submitNote(note) in CreateArea.jsx  <CreateArea onAdd={addNote} />;
     //console.log(newNote);
     setNotes(prevNote => {
       return [...prevNote, newNote];
     });
   }
 
-
-
+  function deleteNote(id) {
+    //props.onDelete(props.id) defined in handleClick() in Notes.jsx;
+    //console.log("delete triggered");
+    setNotes(prevNotes => {
+      return prevNotes.filter((noteItem, index) => {
+        return index !== id;
+      });
+    });
+  }
 
   return (
     <div>
@@ -30,7 +37,7 @@ function App() {
           id={index}
           title={noteItem.title}
           content={noteItem.content}
-     
+          onDelete={deleteNote}
         />
       ))}
       <Footer />
