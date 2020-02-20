@@ -1,4 +1,7 @@
-//1. Create a new React app.
+//1. Create a new React app.  https://reactjs.org/docs/create-a-new-react-app.html
+/* npx create-react-app my-app
+cd my-app
+npm start */
 //2. Create a App.jsx component.
 //3. Create a Header.jsx component that renders a <header> element
 //to show the Keeper App name in an <h1>.
@@ -23,3 +26,6 @@ ReactDOM.render(<App></App>, document.getElementById("root"));
 //https://w00gz.csb.app/
 
 //HINT: You will need to study the classes in teh styles.css file to appy styling.
+
+/********************************************************************************/
+//keeper app part 2 challenge . Render all the notes inside notes.js as a seperate Note component. Use props
